@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tomáš Roček</title>
+    <script>
+        // Funkce pro přepínání zobrazení fotky a artist statementu
+        function toggleContent() {
+            var description = document.getElementById('project-description');
+            var image = document.getElementById('tomas-image');
+            
+            // Přepnutí viditelnosti
+            if (description.style.display === 'none' && image.style.display === 'none') {
+                description.style.display = 'block';
+                image.style.display = 'block';
+            } else {
+                description.style.display = 'none';
+                image.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body style="background-image: url('/images/bcg/main.jpg');">
+  
+    <!-- Kliknutí na Tomáš Roček spustí funkci toggleContent -->
+    <h1 class="h-clickable" onclick="toggleContent()">Tomáš Roček</h1>
+
+    <!-- Artist statement bude teď skrytý na začátku -->
+    <div id="project-description" class="project-description" style="display: none;">
+        <p>
+            As a multimedia artist and writer, my work centers on engaging with people and delving into physical and philosophical investigations of trauma, sustainability, and narratives. I strive to connect my experiences of pain, trauma, and anxiety with transformative approaches in writing and physical activities like dance, improvisation, and visual-creative exercises.
+            My visual practice encompasses painting, sound, graphic design, video, and the manipulation of found objects, often recycled, to integrate sustainability into my work.
+            The use of diverse mediums allows me to convey the complexity of the themes I address, offering a sensory experience that transcends traditional storytelling.
+        </p>
+    </div>
+
+    <!-- Fotka bude teď skrytá na začátku -->
+    <img id="tomas-image" src="images/tomas_pic.jpeg" width="20%" height="auto" alt="Tomas" style="display: none;">
+
+    <ul>
+        
+          <script>
+        // Funkce pro přepínání zobrazení fotky a artist statementu
+        function toggleContent() {
+            var description = document.getElementById('project-description');
+            var image = document.getElementById('tomas-image');
+            
+            // Přepnutí viditelnosti
+            if (description.style.display === 'none' && image.style.display === 'none') {
+                description.style.display = 'block';
+                image.style.display = 'block';
+            } else {
+                description.style.display = 'none';
+                image.style.display = 'none';
+            }
+        }
+    </script>
+  
+
+    <ul>
+        
+       <!-- <li><strong>currently working on video installation with czech german collective hotel k </strong></a></li>-->
+        <li><a href="painting.html">Painting</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cv.html">CV</a></li>
+    </ul>
+
+</body>
+</html>

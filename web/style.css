@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap'); 
+/* Import DM Sans font with weight 700 from Google Fonts */
+
+/* Apply global styles */
+
+/* Link styles */
+a {
+    font-family: 'DM Sans', sans-serif; /* Use DM Sans font for all links */
+    font-weight: 700;                   /* Bold font weight for links */
+    color: black;                      /* Default link color is black */
+    text-decoration: none;             /* Remove underline from links */
+    font-size: 18px;                   /* Set font size for links */
+}
+
+a:hover {
+    color: rgb(59, 207, 233);          /* Light blue color on hover */
+    text-decoration: none;             /* Keep no underline on hover */
+}
+
+a:focus, a:active {
+    color: rgb(22, 216, 126);          /* Green color when link is focused or active */
+    text-decoration: none;             /* No underline */
+}
+
+body {
+    background-repeat: no-repeat;       /* Prevent background image repetition */
+    background-position: center center;/* Center the background image */
+    background-size: cover;             /* Scale background to cover entire viewport */
+    min-height: 100vh;                  /* Minimum height is full viewport height */
+    max-width: 100vw;                   /* Maximum width is viewport width */
+    font-family: Arial, sans-serif;    /* Default font for body text */
+    text-align: left;                   /* Align all text to the left */
+    margin-top: 40px;                   /* Space above the body content */
+    margin-left: 40px;                  /* Space on the left side */
+}
+
+/* Heading styles */
+h1 {
+    font-family: 'DM Sans', sans-serif; /* Use DM Sans font for main headings */
+    font-weight: 700;                   /* Bold font weight */
+    font-size: 36px;                   /* Large font size for headings */
+    margin-bottom: 20px;               /* Space below heading */
+    text-align: left;                  /* Align heading text to the left */
+}
+
+/* Paragraph styles */
+p {
+    font-family: Arial, sans-serif;   /* Arial font for paragraphs */
+    font-size: 16px;                  /* Base font size */
+    line-height: 1.6;                 /* Line height for readability */
+    margin-bottom: 20px;              /* Space after paragraphs */
+    text-align: left;                 /* Align text left */
+    font-weight: 400;  
+                   /* Normal font weight */
+}
+
+
+
+strong {
+    font-family: 'DM Sans', sans-serif; /* Use DM Sans for bold/strong text */
+}
+
+/* Style for unordered lists */
+ul {
+    list-style: none;                 /* Remove default bullets */
+    padding: 0;                      /* Remove default padding */
+}
+
+ul li {
+    margin-bottom: 10px;             /* Space between list items */
+}
+
+ul li:hover {
+    color: green;                   /* Change list item text to green on hover */
+}
+
+/* Container for general content */
+.container {
+    width: 100%;                    /* Take full available width */
+    max-width: 900px;               /* Max width capped at 900px for readability */
+    margin: 40px 0;                 /* Vertical margin above and below */
+    padding: 0;                     /* No padding */
+    text-align: left;               /* Left aligned text */
+}
+
+/* Images within project descriptions */
+.project-description img {
+    width: 100%;                   /* Image fills width of container */
+    height: auto;                  /* Maintain aspect ratio */
+    object-fit: cover;             /* Cover image area without distortion */
+    display: block;                /* Display as block to avoid inline gaps */
+    min-width: 100%;               /* Minimum width is container width */
+}
+
+/* Image gallery container */
+.image-gallery {
+    display: flex;                 /* Use flexbox for layout */
+    flex-wrap: wrap;               /* Allow images to wrap onto next lines */
+    gap: 10px;                    /* Space between images */
+    margin-bottom: 20px;           /* Space below gallery */
+    justify-content: flex-start;   /* Align images to left */
+    width: 90%;                   /* Gallery width is 90% of container */
+}
+
+/* Individual image styling inside gallery */
+.image-gallery img {
+    max-width: 600px;              /* Limit max width of each image */
+    aspect-ratio: 4 / 3;           /* Maintain 4:3 width to height ratio */
+    object-fit: cover;             /* Cover image area nicely */
+    height: auto;                  /* Auto height to keep ratio */
+}
+
+/* Mobile view styling for devices 768px or less */
+@media (max-width: 768px) {
+    .image-gallery img {
+        width: 100%;               /* Images take full width of container */
+        max-width: 100%;           /* No max width limit on mobile */
+    }
+
+    p {
+        width: 100%;               /* Paragraphs take full width */
+    }
+
+    body {
+        margin: 5px 5px;         /* Smaller margins on mobile */
+    }
+    
+    /* Make paragraph text slightly bigger for readability */
+    p {
+        font-size: 18px;
+    }
+    
+    .project {
+        font-size: 28px;           /* Smaller project title on mobile */
+    }
+    
+    h1 {
+        font-size: 32px;           /* Slightly smaller main heading on mobile */
+    }
+    
+    .video-container {
+        max-width: 100%;           /* Video fills container on mobile */
+    }
+}
+
+/* Larger screen styling for 769px and up */
+@media (min-width: 769px) {
+    .image-gallery {
+        margin-right: 0px;        /* Add right margin to gallery */
+    }
+    .image-gallery img {
+        width: calc(33.33% - 10px); /* 3 images per row with gaps */
+    }
+    .video-container {
+        max-width: 800px;          /* Limit video container width */
+    }
+    p {
+        width: 100%;                /* Paragraph width set to 2/3 of container */
+        max-width: 1600px;         /* Max paragraph width */
+    }
+}
+
+/* Video container styling */
+.video-container {
+    position: relative;            /* Container relative for iframe absolute */
+    padding-bottom: 56.25%;        /* 16:9 aspect ratio (9/16 = 0.5625) */
+    height: 0;                    /* Height zero for responsive iframe */
+    overflow: hidden;             /* Hide overflow */
+    margin-bottom: 20px;           /* Space below video */
+    padding: 0 20px;              /* Horizontal padding */
+}
+
+.video-container iframe {
+    position: absolute;           /* Position iframe absolute inside container */
+    top: 0;
+    left: 0;
+    width: 100%;                  /* Fill container width */
+    height: 100%;                 /* Fill container height */
+}
+
+/* Project titles */
+.project {
+    font-family: 'DM Sans', sans-serif; /* Use DM Sans font */
+    font-weight: 700;              /* Bold font */
+    font-size: 36px;              /* Large font size */
+    color: rgb(0, 0, 0);                 /* Black text color */
+    text-align: left;             /* Left aligned */
+}
+
+.project a,
+.project a:active,
+.project a:link,
+.project a:visited {
+    color: #e7bbbb;               /* Light color for links inside project */
+}
+
+.project a:hover {
+    color: #15dbb0;               /* Teal color on hover */
+}
+
+/* Back arrow styling */
+.back-arrow {
+    color: black;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;              /* Large arrow */
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s, color 0.3s; /* Smooth color and move transition */
+    cursor: pointer;              /* Cursor pointer */
+    user-select: none;            /* Disable text selection */
+}
+
+.back-arrow:hover {
+    color: #eb9d0d;              /* Orange color on hover */
+    transform: translateX(-5px); /* Move left slightly on hover */
+}
+
+/* Portfolio link */
+.ba-portfolio {
+    color: rgb(203, 223, 202);   /* Light greenish color */
+}
+
+.ba-portfolio:hover {
+    color: #e21313;              /* Bright red on hover */
+}
+
+/* Contact page body styles */
+.contact-body {
+    background-image: url('/images/bcg/poster.jpg'); /* Background image */
+    background-size: cover;        /* Image covers entire background */
+    color: rgb(255, 255, 255);     /* White text */
+}
+
+/* Portfolio page body styles */
+.portfolio-body {
+    background-image: url('/images/bcg/portfol.jpg'); /* Background image */
+    color: rgb(219, 169, 169);     /* Light pink text */
+}
+
+/* Hover effect for clickable elements */
+.h-clickable:hover {
+    color: rgb(202, 18, 58);       /* Red on hover */
+    cursor: pointer;               /* Pointer cursor */
+}
+
+/* Social links styles */
+.social-links a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;            /* Space between links */
+}
+
+.social-links a:hover {
+    color: #348355;                /* Dark green on hover */
+}
+
+.social-links span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+}
+
+/* Project description section */
+.project-desc {
+    background-color: white;        /* White background */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.project-desc h1 {
+    font-size: 24px;                /* Smaller header size */
+    margin: 40px 0;                /* Vertical margin */
+}
+
+.project-desc p {
+    font-size: 16px;                /* Standard paragraph font size */
+    max-width: 900px;               /* Max width for readability */
+    margin-top: 20px;
+}
+
+/* Image gallery styles repeated for project page */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;               /* Wrap images to next line */
+    gap: 10px;                    /* Space between images */
+    margin-bottom: 20px;
+    justify-content: flex-start;   /* Align left */
+}
+
+.image-gallery img {
+    height: auto;                  /* Maintain aspect ratio */
+    object-fit: cover;             /* Cover image container */
+}
+
+/* Mobile image gallery */
+@media (max-width: 768px) {
+    .image-gallery img {
+        width: 100%;               /* Single image per row */
+        max-width: 100%;
+    }
+    p {
+        width: 100%;               /* Full width paragraphs */
+    };
+}
+
+/* Desktop image gallery */
+@media (min-width: 769px) {
+    .image-gallery img {
+        width: calc(33.33% - 10px); /* Three images per row */
+        max-width: 600px;          /* Max width for images */
+    }
+}
+
+/* Video container on project page */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;        /* 16:9 aspect ratio */
+    height: 0;                    /* Zero height for responsiveness */
+    overflow: hidden;
+    max-width: 100%;              /* Full container width */
+    margin-bottom: 20px;           /* Space below video */
+    object-fit: cover;             /* Ensure proper video display */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;                  /* Full width */
+    height: 70%;                 /* Full height */
+}
